@@ -1,0 +1,2 @@
+ARROW BUTTONS move cursor
+CLICK BUTTONS enable zoom and CRT filter effect

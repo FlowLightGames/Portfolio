@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://World/plants.png" type="Texture" id=1]
+[ext_resource path="res://World/plant.gd" type="Script" id=2]
+[ext_resource path="res://YSORT.gd" type="Script" id=3]
+[ext_resource path="res://World/plants_shd.png" type="Texture" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 3
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[node name="plant" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -16 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 32 )
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+show_behind_parent = true
+material = SubResource( 1 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 32 )
+
+[node name="Position2D" type="Position2D" parent="Sprite"]
+position = Vector2( 8, 24 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 8, 8 )
+shape = SubResource( 2 )

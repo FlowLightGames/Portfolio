@@ -1,0 +1,9 @@
+Menu click healthy and carbohydrate food
+fill energy
+
+WASD movement
+KP6 use tool (on compatible tile)
+KP4 to fish
+ARROW KEYS change tool/seed
+
+move to book to save

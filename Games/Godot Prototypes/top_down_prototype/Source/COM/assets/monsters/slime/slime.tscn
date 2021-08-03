@@ -1,0 +1,112 @@
+[gd_scene load_steps=43 format=2]
+
+[ext_resource path="res://assets/monsters/slime/slime.gd" type="Script" id=1]
+[ext_resource path="res://assets/monsters/slime/LD_Jump/C-001-0001_0007.png" type="Texture" id=2]
+[ext_resource path="res://assets/monsters/slime/LT_idle/C-001-0001_0000.png" type="Texture" id=3]
+[ext_resource path="res://assets/monsters/slime/RD_idle/C-001-0001_0000.png" type="Texture" id=4]
+[ext_resource path="res://assets/monsters/slime/LD_idle/C-001-0001_0000.png" type="Texture" id=5]
+[ext_resource path="res://assets/monsters/slime/RD_idle/C-001-0001_0001.png" type="Texture" id=6]
+[ext_resource path="res://assets/monsters/slime/LD_Jump/C-001-0001_0005.png" type="Texture" id=7]
+[ext_resource path="res://assets/monsters/slime/LD_Jump/C-001-0001_0006.png" type="Texture" id=8]
+[ext_resource path="res://assets/monsters/slime/RT_idle/C-001-0001_0000.png" type="Texture" id=9]
+[ext_resource path="res://assets/monsters/slime/LT_Jump/C-001-0001_0001.png" type="Texture" id=10]
+[ext_resource path="res://assets/monsters/slime/LD_Jump/C-001-0001_0004.png" type="Texture" id=11]
+[ext_resource path="res://assets/monsters/slime/LT_Jump/C-001-0001_0000.png" type="Texture" id=12]
+[ext_resource path="res://assets/monsters/slime/LD_Jump/C-001-0001_0000.png" type="Texture" id=13]
+[ext_resource path="res://assets/monsters/slime/LD_Jump/C-001-0001_0002.png" type="Texture" id=14]
+[ext_resource path="res://assets/monsters/slime/LD_Jump/C-001-0001_0001.png" type="Texture" id=15]
+[ext_resource path="res://assets/monsters/slime/LD_Jump/C-001-0001_0003.png" type="Texture" id=16]
+[ext_resource path="res://assets/monsters/slime/LD_idle/C-001-0001_0001.png" type="Texture" id=17]
+[ext_resource path="res://assets/monsters/slime/RT_Jump/C-001-0001_0000.png" type="Texture" id=18]
+[ext_resource path="res://assets/monsters/slime/RT_Jump/C-001-0001_0001.png" type="Texture" id=19]
+[ext_resource path="res://assets/monsters/slime/RT_Jump/C-001-0001_0004.png" type="Texture" id=20]
+[ext_resource path="res://assets/monsters/slime/RT_Jump/C-001-0001_0005.png" type="Texture" id=21]
+[ext_resource path="res://assets/monsters/slime/RD_Jump/C-001-0001_0002.png" type="Texture" id=22]
+[ext_resource path="res://assets/monsters/slime/LT_Jump/C-001-0001_0006.png" type="Texture" id=23]
+[ext_resource path="res://assets/monsters/slime/RT_Jump/C-001-0001_0003.png" type="Texture" id=24]
+[ext_resource path="res://assets/monsters/slime/RD_Jump/C-001-0001_0007.png" type="Texture" id=25]
+[ext_resource path="res://assets/monsters/slime/LT_Jump/C-001-0001_0003.png" type="Texture" id=26]
+[ext_resource path="res://assets/monsters/slime/RT_Jump/C-001-0001_0006.png" type="Texture" id=27]
+[ext_resource path="res://assets/monsters/slime/LT_Jump/C-001-0001_0007.png" type="Texture" id=28]
+[ext_resource path="res://assets/monsters/slime/RD_Jump/C-001-0001_0003.png" type="Texture" id=29]
+[ext_resource path="res://assets/monsters/slime/RD_Jump/C-001-0001_0005.png" type="Texture" id=30]
+[ext_resource path="res://assets/monsters/slime/LT_Jump/C-001-0001_0004.png" type="Texture" id=31]
+[ext_resource path="res://assets/monsters/slime/RD_Jump/C-001-0001_0000.png" type="Texture" id=32]
+[ext_resource path="res://assets/monsters/slime/RD_Jump/C-001-0001_0004.png" type="Texture" id=33]
+[ext_resource path="res://assets/monsters/slime/RT_Jump/C-001-0001_0002.png" type="Texture" id=34]
+[ext_resource path="res://assets/monsters/slime/RT_Jump/C-001-0001_0007.png" type="Texture" id=35]
+[ext_resource path="res://assets/monsters/slime/LT_Jump/C-001-0001_0005.png" type="Texture" id=36]
+[ext_resource path="res://assets/monsters/slime/RD_Jump/C-001-0001_0006.png" type="Texture" id=37]
+[ext_resource path="res://assets/monsters/slime/LT_Jump/C-001-0001_0002.png" type="Texture" id=38]
+[ext_resource path="res://assets/monsters/slime/RD_Jump/C-001-0001_0001.png" type="Texture" id=39]
+[ext_resource path="res://assets/YSORT.gd" type="Script" id=40]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 5 ), ExtResource( 17 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "idle_LD",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 39 ), ExtResource( 22 ), ExtResource( 29 ), ExtResource( 33 ), ExtResource( 30 ), ExtResource( 37 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "jump_RD",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "jump_LD",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 34 ), ExtResource( 24 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "jump_RT",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 38 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 36 ), ExtResource( 23 ), ExtResource( 28 ) ],
+"loop": false,
+"name": "jump_LT",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "idle_RT",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle_RD",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle_LT",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6, 3 )
+
+[node name="slime" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -23 )
+frames = SubResource( 1 )
+animation = "jump_RT"
+frame = 7
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 8 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 0, 8 )
+script = ExtResource( 40 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

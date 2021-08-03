@@ -1,0 +1,5 @@
+WASD: movement
+Space: Jump
+Mouse: shoot
+Key B: Turn Back Time (Max 3 seconds interval)
+

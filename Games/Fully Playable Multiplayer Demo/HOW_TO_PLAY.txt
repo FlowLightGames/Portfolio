@@ -1,0 +1,16 @@
+WASD/Controller left stick/d-pad input: movement
+ENTER: UI accept
+BACKSPACE: UI back
+
+UI accept to change scenes
+UI accept on BATTLE START menu to start multiplayer
+
+Key O/Gamepad Right face button: Place Bomb
+
+Gamepad1=Player1
+Gamepad2=Player2
+.
+.
+.
+Gamepad8=Player8
+

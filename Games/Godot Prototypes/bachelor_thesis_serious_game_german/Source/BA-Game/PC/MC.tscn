@@ -1,0 +1,383 @@
+[gd_scene load_steps=58 format=2]
+
+[ext_resource path="res://PC/MC.gd" type="Script" id=1]
+[ext_resource path="res://PC/Sprites/pc14.png" type="Texture" id=2]
+[ext_resource path="res://PC/Sprites/pc3.png" type="Texture" id=3]
+[ext_resource path="res://PC/Sprites/shd.png" type="Texture" id=4]
+[ext_resource path="res://PC/Sprites/pc4.png" type="Texture" id=5]
+[ext_resource path="res://PC/Sprites/pc7.png" type="Texture" id=6]
+[ext_resource path="res://PC/Sprites/pc6.png" type="Texture" id=7]
+[ext_resource path="res://PC/Sprites/pc12.png" type="Texture" id=8]
+[ext_resource path="res://PC/Sprites/pc.png" type="Texture" id=9]
+[ext_resource path="res://PC/Sprites/pc8.png" type="Texture" id=10]
+[ext_resource path="res://PC/Sprites/pc10.png" type="Texture" id=11]
+[ext_resource path="res://PC/Sprites/pc15.png" type="Texture" id=12]
+[ext_resource path="res://PC/Sprites/pc1.png" type="Texture" id=13]
+[ext_resource path="res://PC/Sprites/pc9.png" type="Texture" id=14]
+[ext_resource path="res://PC/Sprites/pc13.png" type="Texture" id=15]
+[ext_resource path="res://PC/Sprites/pc2.png" type="Texture" id=16]
+[ext_resource path="res://PC/Sprites/pc11.png" type="Texture" id=17]
+[ext_resource path="res://PC/Sprites/pc5.png" type="Texture" id=18]
+[ext_resource path="res://YSORT.gd" type="Script" id=19]
+[ext_resource path="res://PC/Sprites/bar.png" type="Texture" id=20]
+[ext_resource path="res://PC/Sprites/uibar (1).png" type="Texture" id=21]
+[ext_resource path="res://PC/Sprites/nob1.png" type="Texture" id=22]
+[ext_resource path="res://PC/Sprites/pc21.png" type="Texture" id=23]
+[ext_resource path="res://PC/Sprites/pc22.png" type="Texture" id=24]
+[ext_resource path="res://PC/Sprites/pc16.png" type="Texture" id=25]
+[ext_resource path="res://PC/Sprites/pc19.png" type="Texture" id=26]
+[ext_resource path="res://PC/Sprites/pc32.png" type="Texture" id=27]
+[ext_resource path="res://PC/Sprites/pc24.png" type="Texture" id=28]
+[ext_resource path="res://PC/Sprites/pc18.png" type="Texture" id=29]
+[ext_resource path="res://PC/Sprites/pc26.png" type="Texture" id=30]
+[ext_resource path="res://PC/Sprites/pc27.png" type="Texture" id=31]
+[ext_resource path="res://PC/Sprites/pc23.png" type="Texture" id=32]
+[ext_resource path="res://PC/Sprites/pc31.png" type="Texture" id=33]
+[ext_resource path="res://PC/Sprites/pc17.png" type="Texture" id=34]
+[ext_resource path="res://PC/Sprites/pc29.png" type="Texture" id=35]
+[ext_resource path="res://PC/Sprites/pc28.png" type="Texture" id=36]
+[ext_resource path="res://PC/Sprites/pc20.png" type="Texture" id=37]
+[ext_resource path="res://PC/Sprites/pc30.png" type="Texture" id=38]
+[ext_resource path="res://PC/Sprites/pc25.png" type="Texture" id=39]
+[ext_resource path="res://PC/Sprites/nob2.png" type="Texture" id=40]
+[ext_resource path="res://PC/Sprites/nob0.png" type="Texture" id=41]
+[ext_resource path="res://PC/Final.ttf" type="DynamicFontData" id=42]
+[ext_resource path="res://PC/PC_saveable.tscn" type="PackedScene" id=43]
+[ext_resource path="res://PC/Sprites/wata_bar.png" type="Texture" id=44]
+[ext_resource path="res://PC/Sprites/pc34.png" type="Texture" id=45]
+[ext_resource path="res://PC/Sprites/16x512.png" type="Texture" id=46]
+[ext_resource path="res://PC/Sprites/pc35.png" type="Texture" id=47]
+[ext_resource path="res://PC/Sprites/pc33.png" type="Texture" id=48]
+[ext_resource path="res://PC/HBoxContainer.gd" type="Script" id=49]
+[ext_resource path="res://PC/Sprites/d_0.png" type="Texture" id=50]
+[ext_resource path="res://PC/Sprites/2.png" type="Texture" id=51]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 4 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.8
+}, {
+"frames": [ ExtResource( 40 ), null ],
+"loop": true,
+"name": "catch",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "get",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 26 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "water",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ) ],
+"loop": false,
+"name": "plow",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 36 ) ],
+"loop": false,
+"name": "1cast",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "0run",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "0bite",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "2idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 47 ), ExtResource( 45 ), ExtResource( 45 ) ],
+"loop": false,
+"name": "KO",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "1run",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "3run",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 39 ) ],
+"loop": false,
+"name": "0cast",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "1idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 37 ) ],
+"loop": false,
+"name": "2cast",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "3bite",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "3idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 3 ), ExtResource( 18 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "2run",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "0idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 32 ) ],
+"loop": true,
+"name": "2bite",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ) ],
+"loop": true,
+"name": "1bite",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 33 ) ],
+"loop": false,
+"name": "3cast",
+"speed": 4.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=5]
+blend_mode = 3
+
+[sub_resource type="CanvasItemMaterial" id=6]
+blend_mode = 3
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = -8
+font_data = ExtResource( 42 )
+
+[node name="MC" type="KinematicBody2D"]
+collision_mask = 3
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 11 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Interacter" type="Position2D" parent="."]
+
+[node name="debug" type="AnimatedSprite" parent="Interacter"]
+visible = false
+z_index = -4096
+frames = SubResource( 3 )
+playing = true
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 0, 11 )
+script = ExtResource( 19 )
+
+[node name="Get_sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -19 )
+z_index = 1
+texture = ExtResource( 46 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 4 )
+animation = "KO"
+frame = 2
+playing = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="AnimatedSprite"]
+show_behind_parent = true
+material = SubResource( 5 )
+position = Vector2( 0, 1 )
+texture = ExtResource( 4 )
+
+[node name="Night" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="ColorRect" type="ColorRect" parent="Night"]
+material = SubResource( 6 )
+margin_right = 640.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 487.0
+margin_top = -39.0
+margin_right = 523.0
+margin_bottom = -23.0
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 49 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="planting" type="TextureRect" parent="HUD/HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 51 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="doing" type="TextureRect" parent="HUD/HBoxContainer"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+texture = ExtResource( 50 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -5.0
+margin_top = 6.0
+margin_right = 35.0
+margin_bottom = 46.0
+rect_scale = Vector2( 0.5, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Energie" type="TextureRect" parent="HUD"]
+margin_left = 600.0
+margin_top = 143.0
+margin_right = 633.0
+margin_bottom = 355.0
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="EnergieA" type="TextureProgress" parent="HUD/Energie"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 27.0
+margin_bottom = 206.0
+texture_progress = ExtResource( 20 )
+fill_mode = 3
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Water" type="TextureRect" parent="HUD"]
+margin_left = 567.0
+margin_top = 143.0
+margin_right = 600.0
+margin_bottom = 355.0
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="WaterA" type="TextureProgress" parent="HUD/Water"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 27.0
+margin_bottom = 206.0
+texture_progress = ExtResource( 44 )
+fill_mode = 3
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HUD"]
+margin_left = 19.0
+margin_top = 14.0
+margin_right = 37.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 1 )
+text = "test"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Day" type="Label" parent="HUD"]
+margin_left = 19.0
+margin_top = 26.0
+margin_right = 37.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 1 )
+text = "test"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Time" type="Label" parent="HUD"]
+margin_left = 19.0
+margin_top = 38.0
+margin_right = 40.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 1 )
+text = "test"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Daytimer" type="Timer" parent="HUD/Time"]
+wait_time = 15.0
+autostart = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="fishtimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="PC_saveable" parent="." instance=ExtResource( 43 )]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="timeout" from="HUD/Time/Daytimer" to="." method="_on_Daytimer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="fishtimer" to="." method="_on_fishtimer_timeout"]

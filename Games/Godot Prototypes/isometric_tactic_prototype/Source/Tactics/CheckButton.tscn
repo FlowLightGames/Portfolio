@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://zoomB.png" type="Texture" id=1]
+[ext_resource path="res://CheckButton1.gd" type="Script" id=2]
+[ext_resource path="res://zoomBT.png" type="Texture" id=3]
+
+[node name="CheckButton" type="TextureButton"]
+anchor_left = 0.046
+anchor_top = 0.043
+anchor_right = 0.046
+anchor_bottom = 0.043
+rect_scale = Vector2( 2, 2 )
+toggle_mode = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+texture_disabled = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

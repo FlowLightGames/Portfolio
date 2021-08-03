@@ -1,0 +1,32 @@
+Since most of the university projects also were the final grade/ part of the final grade I don't have the files.
+But I will include a Transcript of the modules at university.
+ 
+Here is an Overview:
+
+VR sportsgame: Sportsball3000VR
+Steam VR and Vive libraries
+Engine: Unity
+Module: Active Sportsgames
+
+Story drive game: NaMa
+Top-down + text adventure
+Engine: Godot
+Module: Story Worlds
+
+Modern high level shader
+Compute-shader imitating bugs and rain
+Engine: Unity/ HLSL
+Module: Modern Techniques for Shader Development and Image Synthesis
+
+Small physics based Game and physics engine : untitled
+3d physics
+Language: C++
+Module: Game Physics
+
+Small math project in Assembler
+Language: Assembler
+Module: Operating Systems and Hardware oriented Programming for Games
+
+Small touchscreen based game: untitled
+Engine: Unity
+Module Interaction Methods and Devices

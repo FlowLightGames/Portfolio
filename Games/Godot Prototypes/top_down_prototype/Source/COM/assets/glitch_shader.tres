@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+void fragment(){
+vec2 uv_1,uv_2;
+uv_1=UV+vec2(TEXTURE_PIXEL_SIZE.x,0);
+uv_2=UV-vec2(TEXTURE_PIXEL_SIZE.x,0);
+COLOR=texture(TEXTURE,
+(uv_1)
+).a*vec4(1,0,1,1)+
+texture(TEXTURE,
+(uv_2)
+).a*vec4(0,1,1,1);
+}
+"
+
+[resource]
+shader = SubResource( 1 )

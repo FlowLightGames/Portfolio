@@ -1,0 +1,121 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/YSORT.gd" type="Script" id=1]
+[ext_resource path="res://assets/monsters/origami/origami.gd" type="Script" id=2]
+[ext_resource path="res://assets/monsters/origami/0.png" type="Texture" id=3]
+[ext_resource path="res://assets/monsters/origami/1.png" type="Texture" id=4]
+[ext_resource path="res://assets/monsters/origami/part1.png" type="Texture" id=5]
+[ext_resource path="res://assets/16_default.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 26, 1 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+} ]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.829412, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 26.46
+initial_velocity_random = 0.51
+angular_velocity = 167.62
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+angle = 360.0
+angle_random = 1.0
+scale = 0.1
+scale_random = 1.0
+color_ramp = SubResource( 4 )
+
+[sub_resource type="CanvasItemMaterial" id=6]
+light_mode = 2
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = true
+
+[sub_resource type="ParticlesMaterial" id=7]
+emission_shape = 1
+emission_sphere_radius = 2.37
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 90.11
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+anim_speed = 4.06
+anim_speed_random = 1.0
+anim_offset = 1.0
+anim_offset_random = 0.95
+
+[node name="origami" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 150 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -32 )
+frames = SubResource( 2 )
+animation = "0"
+
+[node name="Position2D" type="Position2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+modulate = Color( 0.0392157, 0.027451, 0.054902, 1 )
+show_behind_parent = true
+position = Vector2( 0, -40 )
+amount = 37
+lifetime = 1.79
+process_material = SubResource( 5 )
+texture = ExtResource( 5 )
+
+[node name="lazer" type="Particles2D" parent="."]
+modulate = Color( 0.647059, 0.584314, 0.729412, 1 )
+light_mask = 2
+material = SubResource( 6 )
+position = Vector2( 0, -20 )
+z_index = 1000
+z_as_relative = false
+emitting = false
+amount = 36
+lifetime = 2.5
+speed_scale = 2.31
+local_coords = false
+process_material = SubResource( 7 )
+texture = ExtResource( 5 )
+
+[node name="Light2D" type="Light2D" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+show_behind_parent = true
+position = Vector2( 0.5, 37 )
+scale = Vector2( 1.607, 8.525 )
+texture = ExtResource( 6 )
+range_item_cull_mask = 2

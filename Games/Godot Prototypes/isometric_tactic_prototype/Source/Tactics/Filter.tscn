@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Filter.gd" type="Script" id=1]
+[ext_resource path="res://crtB.png" type="Texture" id=2]
+[ext_resource path="res://crtBT.png" type="Texture" id=3]
+[ext_resource path="res://CheckButton2.gd" type="Script" id=4]
+[ext_resource path="res://Filter.shader" type="Shader" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 5 )
+shader_param/scan_line_count = 540.0
+
+[node name="Filter" type="CanvasLayer"]
+layer = 10
+
+[node name="TextureRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 1 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton" type="TextureButton" parent="."]
+anchor_left = 0.046
+anchor_top = 0.115
+anchor_right = 0.046
+anchor_bottom = 0.136
+rect_scale = Vector2( 2, 2 )
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_disabled = ExtResource( 3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="toggled" from="CheckButton" to="TextureRect" method="_on_CheckButton_toggled"]

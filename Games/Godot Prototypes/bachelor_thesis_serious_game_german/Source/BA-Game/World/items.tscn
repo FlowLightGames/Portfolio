@@ -1,0 +1,373 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/inv.gd" type="Script" id=1]
+[ext_resource path="res://World/FONT.tres" type="DynamicFont" id=2]
+[ext_resource path="res://World/0.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.176471, 0.25098, 0.596078, 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+col_fruit = Color( 0.341176, 0.921569, 0.152941, 1 )
+col_sugar = Color( 0.956863, 0.101961, 0.2, 1 )
+col_fat = Color( 0.952941, 0.866667, 0.133333, 1 )
+col_milk = Color( 1, 1, 1, 1 )
+col_meats = Color( 0.729412, 0.270588, 0.0901961, 1 )
+col_wheat = Color( 0.894118, 0.882353, 0.729412, 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="Panel"]
+margin_left = 267.0
+margin_top = 18.0
+margin_right = 624.0
+margin_bottom = 196.0
+custom_fonts/font = ExtResource( 2 )
+custom_constants/vseparation = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Food" type="ItemList" parent="Panel"]
+margin_left = 26.0
+margin_top = 269.0
+margin_right = 427.0
+margin_bottom = 342.0
+hint_tooltip = "funny text"
+custom_fonts/font = ExtResource( 2 )
+max_columns = 12
+same_column_width = true
+fixed_column_width = 40
+icon_mode = 0
+fixed_icon_size = Vector2( 32, 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hinzufuegen" type="Button" parent="."]
+margin_left = 273.0
+margin_top = 220.0
+margin_right = 355.0
+margin_bottom = 248.0
+custom_fonts/font = ExtResource( 2 )
+text = "Hinzufuegen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leeren" type="Button" parent="."]
+margin_left = 387.0
+margin_top = 220.0
+margin_right = 469.0
+margin_bottom = 248.0
+custom_fonts/font = ExtResource( 2 )
+text = "Leeren"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fertig" type="Button" parent="."]
+margin_left = 535.0
+margin_top = 220.0
+margin_right = 617.0
+margin_bottom = 248.0
+custom_fonts/font = ExtResource( 2 )
+text = "Fertig"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pyramide" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pyramide"]
+margin_left = 27.0
+margin_top = 33.0
+margin_right = 40.0
+margin_bottom = 40.0
+custom_constants/separation = 10
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fett" type="HBoxContainer" parent="Pyramide/VBoxContainer"]
+margin_right = 224.0
+margin_bottom = 24.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="TextureRect" parent="Pyramide/VBoxContainer/Fett"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 95.0
+margin_right = 129.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="Suess" type="HBoxContainer" parent="Pyramide/VBoxContainer"]
+margin_top = 34.0
+margin_right = 224.0
+margin_bottom = 58.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="TextureRect" parent="Pyramide/VBoxContainer/Suess"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 95.0
+margin_right = 129.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="Milch" type="HBoxContainer" parent="Pyramide/VBoxContainer"]
+margin_top = 68.0
+margin_right = 224.0
+margin_bottom = 92.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="TextureRect" parent="Pyramide/VBoxContainer/Milch"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 57.0
+margin_right = 91.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="1" type="TextureRect" parent="Pyramide/VBoxContainer/Milch"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 95.0
+margin_right = 129.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="2" type="TextureRect" parent="Pyramide/VBoxContainer/Milch"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 133.0
+margin_right = 167.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="FischFleischEi" type="HBoxContainer" parent="Pyramide/VBoxContainer"]
+margin_top = 102.0
+margin_right = 224.0
+margin_bottom = 126.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="TextureRect" parent="Pyramide/VBoxContainer/FischFleischEi"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 19.0
+margin_right = 53.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="1" type="TextureRect" parent="Pyramide/VBoxContainer/FischFleischEi"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 57.0
+margin_right = 91.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="2" type="TextureRect" parent="Pyramide/VBoxContainer/FischFleischEi"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 95.0
+margin_right = 129.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="3" type="TextureRect" parent="Pyramide/VBoxContainer/FischFleischEi"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 133.0
+margin_right = 167.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="4" type="TextureRect" parent="Pyramide/VBoxContainer/FischFleischEi"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 171.0
+margin_right = 205.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="Getreide" type="HBoxContainer" parent="Pyramide/VBoxContainer"]
+margin_top = 136.0
+margin_right = 224.0
+margin_bottom = 160.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="TextureRect" parent="Pyramide/VBoxContainer/Getreide"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 19.0
+margin_right = 53.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="1" type="TextureRect" parent="Pyramide/VBoxContainer/Getreide"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 57.0
+margin_right = 91.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="2" type="TextureRect" parent="Pyramide/VBoxContainer/Getreide"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 95.0
+margin_right = 129.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="3" type="TextureRect" parent="Pyramide/VBoxContainer/Getreide"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 133.0
+margin_right = 167.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="4" type="TextureRect" parent="Pyramide/VBoxContainer/Getreide"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 171.0
+margin_right = 205.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="GemueseObst" type="HBoxContainer" parent="Pyramide/VBoxContainer"]
+margin_top = 170.0
+margin_right = 224.0
+margin_bottom = 194.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="TextureRect" parent="Pyramide/VBoxContainer/GemueseObst"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 34.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="1" type="TextureRect" parent="Pyramide/VBoxContainer/GemueseObst"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 38.0
+margin_right = 72.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="2" type="TextureRect" parent="Pyramide/VBoxContainer/GemueseObst"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 76.0
+margin_right = 110.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="3" type="TextureRect" parent="Pyramide/VBoxContainer/GemueseObst"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 114.0
+margin_right = 148.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="4" type="TextureRect" parent="Pyramide/VBoxContainer/GemueseObst"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 152.0
+margin_right = 186.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="5" type="TextureRect" parent="Pyramide/VBoxContainer/GemueseObst"]
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 190.0
+margin_right = 224.0
+margin_bottom = 24.0
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 99.0
+margin_top = 130.0
+margin_right = 178.0
+margin_bottom = 134.0
+custom_fonts/font = ExtResource( 2 )
+text = "Fisch/Fleisch/Ei"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 124.0
+margin_top = 62.0
+margin_right = 155.0
+margin_bottom = 66.0
+custom_fonts/font = ExtResource( 2 )
+text = "Zucker"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 130.0
+margin_top = 28.0
+margin_right = 149.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 2 )
+text = "Fett"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 108.0
+margin_top = 96.0
+margin_right = 174.0
+margin_bottom = 100.0
+custom_fonts/font = ExtResource( 2 )
+text = "Milchprodukte"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 76.0
+margin_top = 164.0
+margin_right = 207.0
+margin_bottom = 168.0
+custom_fonts/font = ExtResource( 2 )
+text = "Getreideprodukte/Kartoffel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 108.0
+margin_top = 198.0
+margin_right = 171.0
+margin_bottom = 202.0
+custom_fonts/font = ExtResource( 2 )
+text = "Obst/Gemuese"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Hinzufuegen" to="." method="_on_Hinzufuegen_pressed"]
+[connection signal="pressed" from="Leeren" to="." method="_on_Leeren_pressed"]
+[connection signal="pressed" from="Fertig" to="." method="_on_Fertig_pressed"]

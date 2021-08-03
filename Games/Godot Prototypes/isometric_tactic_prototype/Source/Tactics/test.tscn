@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Board.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Filter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://zoomB.png" type="Texture" id=3]
+[ext_resource path="res://Camera2D.gd" type="Script" id=4]
+[ext_resource path="res://CheckButton1.gd" type="Script" id=5]
+[ext_resource path="res://zoomBT.png" type="Texture" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( -480, -270 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+layer = 11
+
+[node name="CheckButton" type="TextureButton" parent="Camera2D/CanvasLayer"]
+anchor_left = 0.046
+anchor_top = 0.043
+anchor_right = 0.046
+anchor_bottom = 0.043
+margin_left = -0.32
+margin_top = 9.56
+margin_right = 50.68
+margin_bottom = 31.56
+rect_scale = Vector2( 2, 2 )
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 6 )
+texture_disabled = ExtResource( 6 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Filter" parent="." instance=ExtResource( 2 )]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 960, 540 )
+handle_input_locally = false
+usage = 0
+render_target_update_mode = 3
+
+[node name="YSort" parent="ViewportContainer/Viewport" instance=ExtResource( 1 )]
+[connection signal="toggled" from="Camera2D/CanvasLayer/CheckButton" to="Camera2D" method="_on_CheckButton_toggled"]

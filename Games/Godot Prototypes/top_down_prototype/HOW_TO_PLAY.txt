@@ -1,0 +1,3 @@
+WASD movement
+SPACEBAR dash
+LEFT MOUSE attack (combo 3 but only 1 animation)
